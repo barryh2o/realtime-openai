@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	background-color: #f4f4f9;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header */
+.header {
+	background: linear-gradient(135deg, #8e2de2, #4a00e0);
+	color: white;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.header h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.header .tagline {
+	font-size: 1.2rem;
+	color: #ffeb3b;
+	font-style: italic;
+}
+
+/* Hero Section */
+.hero {
+	/* padding: 50px 0;
+	text-align: center;
+	background-color: #ffffff;
+	border-radius: 10px; */
+	/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+	/* margin: 20px 0; */
+	/* position: relative; Para centralizar o botão */
+}
+
+.audio-controls {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.audio-button {
+	background-color: #8e2de2;
+	color: white;
+	border: none;
+	border-radius: 50%; /* Botão circular */
+	width: 80px;
+	height: 80px;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	animation: pulse 2s infinite; /* Animação de pulsação */
+}
+
+.audio-button:hover {
+	transform: scale(1.1); /* Aumenta ligeiramente ao passar o mouse */
+}
+
+.audio-button.playing {
+	background-color: #e74c3c;
+	animation: none; /* Remove a animação quando o áudio está tocando */
+}
+
+.audio-button .icon {
+	display: inline-block;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(142, 45, 226, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 15px rgba(142, 45, 226, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(142, 45, 226, 0);
+	}
+}
+
+/* Footer */
+.footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer a {
+	color: #ffeb3b;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
